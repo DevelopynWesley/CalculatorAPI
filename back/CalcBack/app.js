@@ -74,6 +74,18 @@ app.get('/mul/:num1/:num2/',
 
     })
 
+    app.get('/per/:num1/:num2/',
+    (req, res) => {
+
+        const num1 = parseInt(req.params.num1);
+        const num2 = parseInt(req.params.num2);
+
+        let data = num1 * num2/100;
+
+        res.send(data.toString());
+
+    })
+
 
 
 app.listen(3000);
